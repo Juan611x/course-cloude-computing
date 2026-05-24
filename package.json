@@ -1,0 +1,20 @@
+{
+  "name": "cloud-computing-aws-book",
+  "version": "1.0.0",
+  "description": "Libro técnico de Cloud Computing con AWS",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juan611x/course-cloude-computing.git"
+  },
+  "author": "Juan",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
