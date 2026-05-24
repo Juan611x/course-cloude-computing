@@ -1,0 +1,15 @@
+# Dependencias
+node_modules/
+
+# Build de VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
