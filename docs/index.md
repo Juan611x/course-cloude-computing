@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: Comenzar →
-      link: /modulo-01/intro
+      link: /01-fundaments/01.Introduction
     - theme: alt
-      text: Referencia rápida
-      link: /referencia
+      text: Consola de AWS
+      link: /01-fundaments/04.consolaAWS
 
 features:
   - icon: ☁️
