@@ -3,7 +3,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 export default withMermaid(defineConfig({
   // ─── Metadatos del libro ────────────────────────────────────────────────────
-  title: 'Cloud Computing con AWS',
+  title: 'AWS Book',
   description: 'Libro de notas técnicas del curso de Cloud Computing con AWS. Arquitectura, servicios, prácticas y patrones.',
   lang: 'es-ES',
 
@@ -13,8 +13,9 @@ export default withMermaid(defineConfig({
 
   // ─── Head (metadatos HTML) ──────────────────────────────────────────────────
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#FF9900' }],  // naranja AWS
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['meta', { name: 'theme-color', content: '#FF9900' }],
   ],
 
   // ─── Tema ──────────────────────────────────────────────────────────────────
@@ -50,6 +51,25 @@ export default withMermaid(defineConfig({
           { text: '03 · Servicios de AWS por Categoría',   link: '/01-fundaments/03.servicios' },
           { text: '04 · La Consola de AWS',                link: '/01-fundaments/04.consolaAWS' },
           { text: '05 · La CLI de AWS',                    link: '/01-fundaments/05.comandLine' },
+        ]
+      },
+      {
+        text: '🖥️ Módulo 2 — Amazon EC2',
+        collapsed: false,
+        items: [
+          { text: '01 · EC2: Elastic Compute Cloud', link: '/02-InfraestructuraCompute/01.ec2' },
+          { text: '02 · Seguridad en EC2',           link: '/02-InfraestructuraCompute/02.security' },
+          { text: '03 · Amazon Machine Images',      link: '/02-InfraestructuraCompute/03.AMIs' },
+          { text: '04 · UserData y Metadata',        link: '/02-InfraestructuraCompute/04.UserData-Metadata' },
+          { text: '05 · Amazon EBS',                 link: '/02-InfraestructuraCompute/05.EBS' },
+          { text: '06 · Modelos de Pricing en EC2',  link: '/02-InfraestructuraCompute/06.Pricing' },
+        ]
+      },
+      {
+        text: '📌 Referencia Transversal',
+        collapsed: true,
+        items: [
+          { text: 'Gestión de Regiones desde la CLI', link: '/transversal/regiones-cli' },
         ]
       },
     ],

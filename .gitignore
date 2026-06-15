@@ -13,3 +13,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Certificados
+*.pem
+
+# Originales de imágenes (no rastrear en Git)
+_originals/
