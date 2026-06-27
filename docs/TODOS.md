@@ -3,3 +3,5 @@ Completar el contenido de la seccion 04.UserData-Metadata, la seccion de METADAT
 Adjuntar imagenes de la creacion para cada tipo de Volumen en la seccion de 05.EBS, subseccion de tipos de volumenes. Explicarlas tambien
 
 Agregar Imagenes y complementos a la seccion 06. de modelos de precio
+
+Detallar más la fase avanzada del la creación de Instancias EC2 sobre todo la parte de Network

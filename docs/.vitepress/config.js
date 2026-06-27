@@ -66,10 +66,18 @@ export default withMermaid(defineConfig({
         ]
       },
       {
+        text: '⚡ Módulo 3 — Alta Disponibilidad',
+        collapsed: false,
+        items: [
+          { text: '01 · Elastic Load Balancers', link: '/03-AltaDisponibilidad/01.ElasticLoadBalancers' },
+        ]
+      },
+      {
         text: '📌 Referencia Transversal',
         collapsed: true,
         items: [
           { text: 'Gestión de Regiones desde la CLI', link: '/transversal/regiones-cli' },
+          { text: 'Modelo OSI',                       link: '/transversal/modelo-osi' },
         ]
       },
     ],
