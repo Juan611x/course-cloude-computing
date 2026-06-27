@@ -1,0 +1,80 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif">
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#EC7211"/>
+    </marker>
+    <marker id="arr-pink" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#C0392B"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#1D8348"/>
+    </marker>
+  </defs>
+
+  <rect width="640" height="300" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="320" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#C0392B">Sin Cross-Zone Load Balancing</text>
+
+  <!-- Internet arrow -->
+  <line x1="18" y1="150" x2="85" y2="150" stroke="#EC7211" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="51" y="143" text-anchor="middle" font-size="11" fill="#EC7211" font-weight="600">100%</text>
+
+  <!-- LB box -->
+  <rect x="86" y="120" width="64" height="60" rx="8" fill="#EC7211"/>
+  <text x="118" y="147" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">LB</text>
+  <text x="118" y="163" text-anchor="middle" font-size="10" fill="#fff">nodo</text>
+
+  <!-- 50% to AZ-a node -->
+  <line x1="150" y1="136" x2="218" y2="100" stroke="#C0392B" stroke-width="2" marker-end="url(#arr-pink)"/>
+  <text x="178" y="108" font-size="11" fill="#C0392B" font-weight="600">50%</text>
+
+  <!-- 50% to AZ-b node -->
+  <line x1="150" y1="164" x2="218" y2="220" stroke="#1D8348" stroke-width="2" marker-end="url(#arr-green)"/>
+  <text x="178" y="202" font-size="11" fill="#1D8348" font-weight="600">50%</text>
+
+  <!-- AZ-a box -->
+  <rect x="218" y="40" width="200" height="150" rx="8" fill="none" stroke="#C0392B" stroke-width="2"/>
+  <text x="318" y="60" text-anchor="middle" font-size="12" fill="#C0392B" font-weight="700">AZ-a  (3 instancias)</text>
+
+  <!-- AZ-a node -->
+  <circle cx="240" cy="100" r="12" fill="#C0392B"/>
+  <text x="240" y="105" text-anchor="middle" font-size="9" fill="#fff">nodo</text>
+
+  <!-- AZ-a instances -->
+  <!-- inst 1 -->
+  <rect x="310" y="60" width="88" height="34" rx="5" fill="#FADBD8" stroke="#C0392B" stroke-width="1.2"/>
+  <text x="354" y="81" text-anchor="middle" font-size="11" fill="#C0392B">EC2  16.6%</text>
+  <line x1="252" y1="90" x2="310" y2="77" stroke="#C0392B" stroke-width="1.2" marker-end="url(#arr-pink)"/>
+
+  <!-- inst 2 -->
+  <rect x="310" y="103" width="88" height="34" rx="5" fill="#FADBD8" stroke="#C0392B" stroke-width="1.2"/>
+  <text x="354" y="124" text-anchor="middle" font-size="11" fill="#C0392B">EC2  16.6%</text>
+  <line x1="252" y1="100" x2="310" y2="120" stroke="#C0392B" stroke-width="1.2" marker-end="url(#arr-pink)"/>
+
+  <!-- inst 3 -->
+  <rect x="310" y="146" width="88" height="34" rx="5" fill="#FADBD8" stroke="#C0392B" stroke-width="1.2"/>
+  <text x="354" y="167" text-anchor="middle" font-size="11" fill="#C0392B">EC2  16.6%</text>
+  <line x1="252" y1="110" x2="310" y2="163" stroke="#C0392B" stroke-width="1.2" marker-end="url(#arr-pink)"/>
+
+  <!-- AZ-b box -->
+  <rect x="218" y="203" width="200" height="70" rx="8" fill="none" stroke="#1D8348" stroke-width="2"/>
+  <text x="318" y="222" text-anchor="middle" font-size="12" fill="#1D8348" font-weight="700">AZ-b  (1 instancia)</text>
+
+  <!-- AZ-b node -->
+  <circle cx="240" cy="240" r="12" fill="#1D8348"/>
+  <text x="240" y="245" text-anchor="middle" font-size="9" fill="#fff">nodo</text>
+
+  <!-- AZ-b inst -->
+  <rect x="310" y="224" width="88" height="34" rx="5" fill="#D5F5E3" stroke="#1D8348" stroke-width="1.2"/>
+  <text x="354" y="245" text-anchor="middle" font-size="11" fill="#1D8348" font-weight="700">EC2  50%</text>
+  <line x1="252" y1="240" x2="310" y2="241" stroke="#1D8348" stroke-width="1.2" marker-end="url(#arr-green)"/>
+
+  <!-- Warning -->
+  <rect x="430" y="120" width="195" height="60" rx="6" fill="#FDEDEC" stroke="#C0392B" stroke-width="1.5"/>
+  <text x="527" y="143" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="700">⚠ Distribución desigual</text>
+  <text x="527" y="160" text-anchor="middle" font-size="10" fill="#C0392B">AZ-b recibe 3× más tráfico</text>
+  <text x="527" y="174" text-anchor="middle" font-size="10" fill="#C0392B">que cada instancia de AZ-a</text>
+
+</svg>

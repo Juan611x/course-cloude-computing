@@ -1,0 +1,67 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif">
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#EC7211"/>
+    </marker>
+    <marker id="arr-b" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#1A5276"/>
+    </marker>
+  </defs>
+
+  <rect width="640" height="300" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="320" y="24" text-anchor="middle" font-size="14" font-weight="700" fill="#1A5276">Con Cross-Zone Load Balancing</text>
+
+  <!-- Internet arrow -->
+  <line x1="18" y1="150" x2="85" y2="150" stroke="#EC7211" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="51" y="143" text-anchor="middle" font-size="11" fill="#EC7211" font-weight="600">100%</text>
+
+  <!-- LB box -->
+  <rect x="86" y="120" width="64" height="60" rx="8" fill="#EC7211"/>
+  <text x="118" y="147" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">LB</text>
+  <text x="118" y="163" text-anchor="middle" font-size="10" fill="#fff">nodo</text>
+
+  <!-- AZ-a box -->
+  <rect x="218" y="40" width="200" height="150" rx="8" fill="none" stroke="#1A5276" stroke-width="2"/>
+  <text x="318" y="60" text-anchor="middle" font-size="12" fill="#1A5276" font-weight="700">AZ-a  (3 instancias)</text>
+
+  <!-- AZ-b box -->
+  <rect x="218" y="203" width="200" height="70" rx="8" fill="none" stroke="#1A5276" stroke-width="2"/>
+  <text x="318" y="222" text-anchor="middle" font-size="12" fill="#1A5276" font-weight="700">AZ-b  (1 instancia)</text>
+
+  <!-- Arrows LB → all 4 instances equally (25% each) -->
+  <!-- inst 1 AZ-a -->
+  <rect x="310" y="60" width="88" height="34" rx="5" fill="#D6EAF8" stroke="#1A5276" stroke-width="1.2"/>
+  <text x="354" y="81" text-anchor="middle" font-size="11" fill="#1A5276" font-weight="600">EC2  25%</text>
+  <line x1="150" y1="140" x2="310" y2="77" stroke="#1A5276" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+
+  <!-- inst 2 AZ-a -->
+  <rect x="310" y="103" width="88" height="34" rx="5" fill="#D6EAF8" stroke="#1A5276" stroke-width="1.2"/>
+  <text x="354" y="124" text-anchor="middle" font-size="11" fill="#1A5276" font-weight="600">EC2  25%</text>
+  <line x1="150" y1="148" x2="310" y2="120" stroke="#1A5276" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+
+  <!-- inst 3 AZ-a -->
+  <rect x="310" y="146" width="88" height="34" rx="5" fill="#D6EAF8" stroke="#1A5276" stroke-width="1.2"/>
+  <text x="354" y="167" text-anchor="middle" font-size="11" fill="#1A5276" font-weight="600">EC2  25%</text>
+  <line x1="150" y1="156" x2="310" y2="163" stroke="#1A5276" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+
+  <!-- inst AZ-b -->
+  <rect x="310" y="224" width="88" height="34" rx="5" fill="#D6EAF8" stroke="#1A5276" stroke-width="1.2"/>
+  <text x="354" y="245" text-anchor="middle" font-size="11" fill="#1A5276" font-weight="600">EC2  25%</text>
+  <line x1="150" y1="166" x2="310" y2="241" stroke="#1A5276" stroke-width="1.2" stroke-dasharray="5,3" marker-end="url(#arr-b)"/>
+
+  <!-- OK badge -->
+  <rect x="430" y="120" width="195" height="60" rx="6" fill="#EAFAF1" stroke="#1D8348" stroke-width="1.5"/>
+  <text x="527" y="143" text-anchor="middle" font-size="11" fill="#1D8348" font-weight="700">✓ Distribución equitativa</text>
+  <text x="527" y="160" text-anchor="middle" font-size="10" fill="#1D8348">Todas las instancias reciben</text>
+  <text x="527" y="174" text-anchor="middle" font-size="10" fill="#1D8348">exactamente el mismo tráfico</text>
+
+  <!-- 25% labels on arrows -->
+  <text x="90" y="108" font-size="10" fill="#1A5276">25%</text>
+  <text x="90" y="132" font-size="10" fill="#1A5276">25%</text>
+  <text x="90" y="172" font-size="10" fill="#1A5276">25%</text>
+  <text x="90" y="212" font-size="10" fill="#1A5276">25%</text>
+
+</svg>
